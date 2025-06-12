@@ -42,4 +42,6 @@ Repo for "<a href="https://arxiv.org/pdf/2506.08989" target="_blank">SwS: Self-a
 
 ## 💡 Introduction 
 
+<div style="text-align: justify;">
 The Self-aware Weakness-driven problem Synthesis framework (SwS) framework proposes to identifies model deficiencies and leverages them for problem augmentation. The weaknesses are defined as questions that the model consistently fails to learn through during RL training. SwS extracts the core concepts from these failure cases and synthesize new problems to strengthen the model's weak areas in subsequent augmented training, enabling it to focus on and gradually overcome its weaknesses.
+</div>
