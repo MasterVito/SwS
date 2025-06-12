@@ -48,8 +48,8 @@ The Self-aware Weakness-driven problem Synthesis framework (SwS) framework propo
 <br>
 
 <p align="center">
-    <img src="./docs/static/images/weakness_identification.png" width="800">
+    <img src="./docs/static/images/method.png" width="800">
     <br>
-    <em>Figure 2: Illustration of the self-aware weakness identification during a preliminary RL training in SwS.
+    <em>Figure 2: An overview of our proposed weakness-driven problem synthesis framework that targets at mitigating the model’s reasoning limitations within the RLVR paradigm.
 </em>
 </p>
