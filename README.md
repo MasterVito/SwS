@@ -107,3 +107,7 @@ If you find this repository helpful, please consider citing our paper:
       url={https://arxiv.org/abs/2506.08989}, 
 }
 ```
+
+## 🌟 Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=mastervito/SwS&type=Date)](https://star-history.com/#mastervito/SwS&Date)
