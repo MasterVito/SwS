@@ -14,10 +14,10 @@ SwS: A Weakness-driven Problem Synthesis Framework</span>
 
 <p align="center">
   <a href="https://mastervito.github.io/MasterVito.SwS.github.io/"><b>[🌐 Website]</b></a> •
-  <a href="https://huggingface.co/llm-agents"><b>[🤗 Demo Dataset]</b></a> •
+  <a href=""><b>[🤗 Demo Dataset]</b></a> •
   <a href="https://arxiv.org/pdf/2506.08989"><b>[📜 Paper]</b></a> •
   <a href="https://github.com/MasterVito/SwS"><b>[🐱 GitHub]</b></a> •
-  <a href="https://twitter.com/zhs05232838/status/1708860992631763092"><b>[🐦 Twitter]</b></a>
+  <a href="https://x.com/weizhuchen/status/1933194338114433470?s=46"><b>[🐦 Twitter]</b></a>
 </p>
 
 
@@ -53,3 +53,6 @@ The Self-aware Weakness-driven problem Synthesis framework (SwS) framework propo
     <em>Figure 2: An overview of our proposed weakness-driven problem synthesis framework that targets at mitigating the model’s reasoning limitations within the RLVR paradigm.
 </em>
 </p>
+
+### Evaluation Results
+
