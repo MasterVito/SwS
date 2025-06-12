@@ -60,7 +60,7 @@ The Self-aware Weakness-driven problem Synthesis framework (SwS) framework propo
 ### 7B Model Performance
 ---
 
-| **Model**                                            | **GSM8K** | **MATH 500** | **Minerva Math** | **Olympiad Bench** | **GaoKao 2023** | **AMC23** | **AIME24 (Avg@~1 / 32)** | **AIME25 (Avg@~1 / 32)** | **Avg.** |
+| **Model**                                            | **GSM8K** | **MATH 500** | **Minerva Math** | **Olympiad Bench** | **GaoKao 2023** | **AMC23** | **AIME24 (Avg@1 / 32)** | **AIME25 (Avg@1 / 32)** | **Avg.** |
 |-----------------------------------------------------|----------:|-------------:|------------------:|--------------------:|----------------:|----------:|--------------------------:|--------------------------:|---------:|
 | [Qwen2.5-7B](https://huggingface.co/Qwen/Qwen2.5-7B)                         | 88.1      | 63.0         | 27.6              | 30.5                | 55.8            | 35.0      | 6.7 / 5.4                 | 0.0 / 1.2                 | 38.3     |
 | [Qwen2.5-7B-IT](https://huggingface.co/Qwen/Qwen2.5-7B-Instruct)            | 91.7      | 75.6         | 38.2              | 40.6                | 63.9            | 50.0      | 16.7 / 10.5               | 13.3 / 6.7                | 48.8     |
