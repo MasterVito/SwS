@@ -12,6 +12,13 @@ SwS: A Weakness-driven Problem Synthesis Framework</span>
 
 </div>
 
+<p align="center">
+  <a href="https://mastervito.github.io/MasterVito.SwS.github.io/"><b>[🌐 Website]</b></a> •
+  <a href="https://huggingface.co/llm-agents"><b>[🤗 HF Dataset]</b></a> •
+  <a href="https://arxiv.org/pdf/2506.08989"><b>[📜 Paper]</b></a> •
+  <a href="https://github.com/MasterVito/SwS"><b>[🐱 GitHub]</b></a> •
+  <a href="https://twitter.com/zhs05232838/status/1708860992631763092"><b>[🐦 Twitter]</b></a>
+</p>
 
 
 ## 🔥 News
