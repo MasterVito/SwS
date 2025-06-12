@@ -37,7 +37,7 @@ Repo for "<a href="https://arxiv.org/pdf/2506.08989" target="_blank">SwS: Self-a
 ## 🔥 News
 
 <!-- - [2023/10/13] 🔥🔥🔥 We release a demo for ToRA at [🐯 Gradio](https://9557c5365a6f44dc84.gradio.live), try it out!!! -->
-- [2023/06/10] Our full code and datasets are under review by Microsoft and will be released upon approval.
+- [2023/06/10] **Our full code and datasets are under review by Microsoft and will be released upon approval.**
 - [2023/06/10] SwS paper, repo, website and demo datasets released.
 
 ## 💡 Introduction 
