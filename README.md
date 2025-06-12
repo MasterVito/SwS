@@ -1,6 +1,6 @@
 <h1 align="center">
 <br>
-<span style="font-size: 200px;">📈</span>
+<img src="./docs/static/images/icon.png" width="200" alt="rho-logo" />
 <br>
-<span style="font-size: 0.5em;">SwS: A Weakness-driven Problem Synthesis Framework</span>
+SwS: A Weakness-driven Problem Synthesis Framework</span>
 </h1>
