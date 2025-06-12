@@ -91,3 +91,20 @@ The Self-aware Weakness-driven problem Synthesis framework (SwS) framework propo
 Additional results for Qwen2.5-3B and Qwen2.5-7B-Math are provided in the paper.
 </div>
 <br>
+
+
+## ☕️ Citation
+
+If you find this repository helpful, please consider citing our paper:
+
+```
+@misc{liang2025swsselfawareweaknessdrivenproblem,
+      title={SwS: Self-aware Weakness-driven Problem Synthesis in Reinforcement Learning for LLM Reasoning}, 
+      author={Xiao Liang and Zhong-Zhi Li and Yeyun Gong and Yang Wang and Hengyuan Zhang and Yelong Shen and Ying Nian Wu and Weizhu Chen},
+      year={2025},
+      eprint={2506.08989},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      url={https://arxiv.org/abs/2506.08989}, 
+}
+```
