@@ -85,10 +85,9 @@ The Self-aware Weakness-driven problem Synthesis framework (SwS) framework propo
 | **SwS-32B**                                          | **96.3**  | **89.4**     | **47.1**          | **60.5**            | **80.3**        | **90.0**  | **43.3** / **33.0**       | **40.0** / **31.8**       | **68.4** |
 | Δ (vs. BaseRL)                                       | +0.2      | +3.8         | +3.7              | +5.8                | +6.5            | +5.0      | +3.3 / +2.3               | +33.3 / +7.2              | **+7.7** |
 
----
 
 <div style="text-align: justify;">
-Additional results for Qwen2.5-3B and Qwen2.5-7B-Math are provided in the paper.
+P.S: Additional results for Qwen2.5-3B and Qwen2.5-7B-Math are provided in the paper.
 </div>
 <br>
 
