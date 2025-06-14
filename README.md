@@ -8,7 +8,7 @@ SwS: A Weakness-driven Problem Synthesis Framework</span>
 <div align="center">
 
 ![](https://img.shields.io/badge/Task-LLM%20Reasoning-orange)
-![](https://img.shields.io/badge/Demoset-Released-blue)
+![](https://img.shields.io/badge/Demo%20Dataset-Released-blue)
 ![](https://img.shields.io/badge/Code%20License-MIT-green)
 
 </div>
