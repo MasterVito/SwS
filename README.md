@@ -40,8 +40,8 @@ Repo for "<a href="https://arxiv.org/pdf/2506.08989" target="_blank">SwS: Self-a
 ## 🔥 News
 
 <!-- - [2023/10/13] 🔥🔥🔥 We release a demo for ToRA at [🐯 Gradio](https://9557c5365a6f44dc84.gradio.live), try it out!!! -->
-- [2023/06/13] We release all prompts used in the SwS framework in <a href="https://github.com/MasterVito/SwS/prompts"><b>prompts</b></a>.
-- [2023/06/13] We update the demo set of synthetic problems from SwS in <a href="https://github.com/MasterVito/SwS/prompts"><b>datasets</b></a>, including 500 samples for each model and category. You can also find them in <a href="https://huggingface.co/datasets/MasterVito/SwS-Demo-Dataset"><b>Demo Dataset</b></a>.
+- [2023/06/13] We release all prompts used in the SwS framework in <a href="https://github.com/MasterVito/SwS/tree/master/prompts"><b>prompts</b></a>.
+- [2023/06/13] We update the demo set of synthetic problems from SwS in <a href="https://github.com/MasterVito/SwS/tree/master/datasets"><b>datasets</b></a>, including 500 samples for each model and category. You can also find them in <a href="https://huggingface.co/datasets/MasterVito/SwS-Demo-Dataset"><b>Demo Dataset</b></a>.
 - [2023/06/10] **Our full code and datasets are under review by Microsoft and will be released upon approval.**
 - [2023/06/10] SwS paper, repo, website and demo datasets released.
 
