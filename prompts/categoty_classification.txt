@@ -1,0 +1,131 @@
+# CONTEXT #
+I am a teacher, and I have some high-level mathematical problems. 
+I want to categorize the domain of these math problems.
+
+# OBJECTIVE #
+A. Provide a concise summary of the math problem, clearly identifying the key concepts or techniques involved.
+B. Assign the problem to one and only one specific mathematical domain.
+The following is the list of domains to choose from:
+<math domains> 
+["Intermediate Algebra", "Geometry", "Precalculus", "Number Theory", "Counting & Probability", "Algebra", "Prealgebra"]
+</math domains>
+
+# STYLE #
+Data report.
+
+# TONE #
+Professional, scientific.
+
+# AUDIENCE #
+Students. Enable them to better understand the domain of the problems.
+
+# RESPONSE: MARKDOWN REPORT #
+## Summarization
+[Summarize the math problem in a brief paragraph.]
+## Math domains
+[Select one domain from the list above that best fits the problem.]
+
+
+# ATTENTION #
+ - You must assign each problem to exactly one of the domains listed above.
+ - If you are genuinely uncertain and none of the listed categories applies, you may use "Other", but this should be a last resort.
+ - Be thoughtful and accurate in your classification. Default to the listed categories whenever possible.
+ - Add "=== report over ===" at the end of the report.
+
+<example math problem>
+**Question**:
+Let $ n(\ge2) $ be a positive integer. Find the minimum $ m $, so that there exists $x_{ij}(1\le i ,j\le n)$ satisfying:
+(1)For every $1\le i ,j\le n, x_{ij}=max\{x_{i1},x_{i2},...,x_{ij}\} $ or $ x_{ij}=max\{x_{1j},x_{2j},...,x_{ij}\}.$
+(2)For every $1\le i \le n$, there are at most $m$ indices $k$ with $x_{ik}=max\{x_{i1},x_{i2},...,x_{ik}\}.$
+(3)For every $1\le j \le n$, there are at most $m$ indices $k$ with $x_{kj}=max\{x_{1j},x_{2j},...,x_{kj}\}.$
+</example math problem>
+
+## Summarization 
+The problem involves an \( n \times n \) matrix where each element \( x_{ij} \) is constrained by the maximum values in its respective row or column. The goal is to determine the minimum possible value of \( m \) such that, for each row and column, the number of indices attaining the maximum value is limited to at most \( m \). This problem requires understanding matrix properties, maximum functions, and combinatorial constraints on structured numerical arrangements.
+
+## Math domains  
+Algebra
+
+=== report over ===
+
+</example math problem> 
+**Question**:
+In an acute scalene triangle $ABC$, points $D,E,F$ lie on sides $BC, CA, AB$, respectively, such that $AD \perp BC, BE \perp CA, CF \perp AB$. Altitudes $AD, BE, CF$ meet at orthocenter $H$. Points $P$ and $Q$ lie on segment $EF$ such that $AP \perp EF$ and $HQ \perp EF$. Lines $DP$ and $QH$ intersect at point $R$. Compute $HQ/HR$.
+</example math problem>
+
+## Summarization  
+The problem involves an acute scalene triangle with three perpendicular cevians intersecting at the orthocenter. Additional perpendicular constructions are made from specific points on segment \( EF \), leading to an intersection at point \( R \). The goal is to determine the ratio \( HQ/HR \), requiring knowledge of triangle geometry, perpendicularity, segment ratios, and properties of the orthocenter.
+
+## Math domains  
+Geometry
+
+=== report over ===
+
+</example math problem> 
+**Question**:
+Three cards are dealt at random from a standard deck of 52 cards.  What is the probability that the first card is a 4, the second card is a $\clubsuit$, and the third card is a 2?
+</example math problem>
+
+## Summarization  
+This problem involves calculating the probability of a specific sequence of events when drawing three cards from a standard 52-card deck without replacement. It requires understanding conditional probability, the basic rules of counting, and how probabilities change as cards are removed from the deck.
+
+## Math domains  
+Counting & Probability
+
+=== report over ===
+
+</example math problem> 
+**Question**:
+Let $x$ and $y$ be real numbers such that $3x + 2y \le 7$ and $2x + 4y \le 8.$  Find the largest possible value of $x + y.$
+</example math problem>
+
+## Summarization  
+This problem involves optimizing a linear expression \( x + y \) subject to a system of linear inequalities. It requires understanding of linear programming concepts, such as identifying feasible regions, analyzing boundary points, and determining the maximum value of an objective function within that region.
+
+## Math domains  
+Intermediate Algebra
+
+=== report over ===
+
+</example math problem> 
+**Question**:
+Solve
+\[\arccos 2x - \arccos x = \frac{\pi}{3}.\]Enter all the solutions, separated by commas.
+</example math problem>
+
+## Summarization  
+This problem requires solving a trigonometric equation involving inverse cosine functions. The equation relates two expressions with \( \arccos(2x) \) and \( \arccos(x) \), and asks for all real solutions satisfying the given identity. It involves knowledge of inverse trigonometric functions, their domains, and properties, as well as algebraic manipulation.
+
+## Math domains  
+Precalculus
+
+=== report over ===
+
+</example math problem> 
+**Question**:
+What perfect-square integer is closest to 273?
+</example math problem>
+
+## Summarization  
+The problem asks for the perfect square integer closest to 273. This involves understanding the distribution and properties of perfect squares, and comparing them with a given integer. It relies on number-theoretic reasoning related to squares of integers and their proximity to a target number.
+
+## Math domains  
+Number Theory
+
+=== report over ===
+
+</example math problem> 
+Voldemort bought $6.\overline{6}$ ounces of ice cream at an ice cream shop. Each ounce cost $\$0.60.$ How much money, in dollars, did he have to pay?
+</example math problem>
+
+## Summarization  
+The problem involves multiplying a repeating decimal, \( 6.\overline{6} \), by a fixed unit price, \$0.60, to find the total cost in dollars. This requires converting a repeating decimal into a fraction or using decimal multiplication, both of which are foundational arithmetic skills.
+
+## Math domains  
+Prealgebra
+
+=== report over ===
+
+<math problem> 
+{REPLACE}
+</math problem>

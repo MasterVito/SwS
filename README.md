@@ -7,18 +7,21 @@ SwS: A Weakness-driven Problem Synthesis Framework</span>
 
 <div align="center">
 
-![](https://img.shields.io/badge/LLM-Reasoning%20Reasoning-orange)
+![](https://img.shields.io/badge/Task-LLM%20Reasoning-orange)
+![](https://img.shields.io/badge/Demoset-Released-blue)
 ![](https://img.shields.io/badge/Code%20License-MIT-green)
 
 </div>
 
 <p align="center">
   <a href="https://mastervito.github.io/MasterVito.SwS.github.io/"><b>[🌐 Website]</b></a> •
-  <a href=""><b>[🤗 Demo Dataset]</b></a> •
+  <a href="https://huggingface.co/datasets/MasterVito/SwS-Demo-Dataset"><b>[🤗 Demo Dataset]</b></a> •
   <a href="https://arxiv.org/pdf/2506.08989"><b>[📜 Paper]</b></a> •
   <a href="https://github.com/MasterVito/SwS"><b>[🐱 GitHub]</b></a> •
-  <a href="https://x.com/weizhuchen/status/1933194338114433470?s=46"><b>[🐦 Twitter]</b></a>
+  <a href="https://x.com/MasterVito0601/status/1933354531905286628"><b>[🐦 Twitter]</b></a> •
+  <a href="https://www.xiaohongshu.com/discovery/item/684bd6800000000003038a48?source=webshare&xhsshare=pc_web&xsec_token=ABOzgM8hshsNCAt9EEVXB5uCw3v7frcLqS9Wft04M_9xQ=&xsec_source=pc_share"><b>[📕 Rednote]</b></a>
 </p>
+
 
 
 <p align="center">
@@ -37,6 +40,8 @@ Repo for "<a href="https://arxiv.org/pdf/2506.08989" target="_blank">SwS: Self-a
 ## 🔥 News
 
 <!-- - [2023/10/13] 🔥🔥🔥 We release a demo for ToRA at [🐯 Gradio](https://9557c5365a6f44dc84.gradio.live), try it out!!! -->
+- [2023/06/13] We release all prompts used in the SwS framework in <a href="https://github.com/MasterVito/SwS/prompts"><b>prompts</b></a>.
+- [2023/06/13] We update the demo set of synthetic problems from SwS in <a href="https://github.com/MasterVito/SwS/prompts"><b>datasets</b></a>, including 500 samples for each model and category. You can also find them in <a href="https://huggingface.co/datasets/MasterVito/SwS-Demo-Dataset"><b>Demo Dataset</b></a>.
 - [2023/06/10] **Our full code and datasets are under review by Microsoft and will be released upon approval.**
 - [2023/06/10] SwS paper, repo, website and demo datasets released.
 

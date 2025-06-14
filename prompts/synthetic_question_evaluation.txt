@@ -1,0 +1,38 @@
+As a critical expert in educational problem design, evaluate the following problem components:
+
+=== GIVEN MATERIALS ===
+1. Problem:
+{PROBLEM}
+
+
+=== EVALUATION CRITERIA ===
+Rate each criterion as: [Perfect | Acceptable | Bad]
+
+1. FORMAT
+- Verify correct implementation of markup tags:
+  <!-- BEGIN RATIONALE --> [design thinking process] <!-- END RATIONALE -->
+  <!-- BEGIN PROBLEM --> [problem] <!-- END PROBLEM -->
+
+2. FACTUAL ACCURACY
+- Check for any incorrect or misleading information in both problem and rationale
+- Verify mathematical, scientific, or logical consistency
+
+
+3. SOLVABILITY
+- Verify if the problem has at least one valid solution
+- Check if all necessary information for solving is provided
+
+=== RESPONSE FORMAT ===
+For each criterion, provide:
+1. Rating: [Perfect | Acceptable | Bad]
+2. Justification: Clear explanation for the rating
+
+=== FINAL VERDICT ===
+After providing all criterion evaluations, conclude your response with:
+'Final Judgement: [verdict]'
+where verdict must be one of:
+- 'perfect' (if both FACTUAL ACCURACY and SOLVABILITY are Perfect, at least two other criteria are Perfect, and no Bad ratings)
+- 'acceptable' (if no Bad ratings and doesn't qualify for perfect)
+- 'bad' (if ANY Bad ratings)
+
+Note: The 'Final Judgement: [verdict]' line must be the final line of your response.

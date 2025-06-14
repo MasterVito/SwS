@@ -1,0 +1,27 @@
+### Given a set of foundational mathematical concepts, a mathematical domain, and a specified difficulty level, generate a well-constructed question that meaningfully integrates multiple listed concepts and reflects the stated level of complexity.
+
+### Foundational Concepts:
+{CONCEPTS}
+
+### Target Difficulty Level: 
+{DIFFICULTY}
+
+### Mathematical Domain: 
+{CATEGORY}
+
+### Instructions:
+1. Begin by outlining which concepts you will combine and how you plan to structure the question.
+2. Ensure that the question is coherent, relevant, and appropriately challenging for the specified level.
+3. The question must be a single standalone problem, not split into multiple sub-questions.
+4. Do not generate proof-based, multiple-choice, or true/false questions.
+5. The answer to the question should be expressible using numbers and mathematical symbols.
+6. Provide a final version of the question that is polished and ready for use.
+
+### Output Format:
+- First, provide your brief outline and planning for the question design.
+- Then, present **only the final version of the question** in the following format:
+
+```text
+[Your developed question here]
+```
+Do not include any placeholder, explanatory text, hints, or solutions to the question in the output block.

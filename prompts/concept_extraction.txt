@@ -1,0 +1,16 @@
+As an expert in educational assessment, analyze this problem:
+<problem>
+{PROBLEM}
+</problem>
+
+Break down and identify {num_concepts} foundational concepts being tested. List these knowledge points that:
+
+- Are core curriculum concepts typically taught in standard courses,
+
+- Are precise and measurable (not vague like "understanding math"),
+
+- Are essential building blocks needed to solve this problem,
+
+- Represent fundamental principles rather than problem-specific techniques.
+
+Think through your analysis step by step, then format your response as a Python code snippet containing a list of {num_concepts} strings, where each string clearly describes one fundamental knowledge point.
