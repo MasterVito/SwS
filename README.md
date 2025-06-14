@@ -113,6 +113,9 @@ If you find this repository helpful, please consider citing our paper:
 }
 ```
 
+## 🙏 Acknowledgement
+We sincerely appreciate the outstanding work of [BigMath](https://github.com/SynthLabsAI/big-math), [PromptCoT](https://github.com/zhaoxlpku/PromptCoT), and [veRL](https://github.com/volcengine/verl). The prompts used in the SwS framework are largely inspired by BigMath and PromptCoT, while the training code is adapted from the excellent veRL repository.
+
 ## 🌟 Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=mastervito/SwS&type=Date)](https://star-history.com/#mastervito/SwS&Date)
