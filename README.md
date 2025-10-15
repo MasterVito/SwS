@@ -24,6 +24,8 @@ SwS: A Weakness-driven Problem Synthesis Framework</span>
 
 
 
+
+
 <p align="center">
 Repo for "<a href="https://arxiv.org/pdf/2506.08989" target="_blank">SwS: Self-aware Weakness-driven Problem Synthesis in Reinforcement Learning for LLM Reasoning</a>"
 </p>
@@ -110,7 +112,7 @@ pip install torch==2.7.1 --index-url https://download.pytorch.org/whl/cu128 # CU
 pip install -r requirements.txt
 ```
 
-**Model downloading:** Here we utilize the [Qwen2.5-base](https://huggingface.co/Qwen/Qwen2.5-7B) model trained on the <a href="data/MATH_12k.parquet"><b>MATH-12k</b></a> dataset. You can download the model using the following command:
+**Model downloading:** Here we utilize the [Qwen2.5-7B](https://huggingface.co/Qwen/Qwen2.5-7B) model trained on the <a href="data/MATH_12k.parquet"><b>MATH-12k</b></a> dataset. You can download the model using the following command:
 
 ```sh
 mkdir -p models
@@ -129,13 +131,13 @@ bash scripts/qwen25_7b_weakness_identification.sh
 ## 2. Problem Synthesis
 The sampling accuracy of problems at each step is also stored in the model checkpoint path. You can compute and summarize these accuracies following the format in the <a href="record"><b>record</b></a> folder.
 
-Given the recorded problems with low learning efficiency, we begin by extracting key concepts from the recorded problems using the LLaMA-3.3-70B-Instruct model:
+Given the recorded problems with low learning efficiency, we begin by extracting key concepts from the recorded problems using the <a href="https://huggingface.co/meta-llama/Llama-3.3-70B-Instruct"><b>Llama-3.3-70B-Instruct</b></a>  model:
 
 ```
 bash scripts/synthesis/step1_concepts_extraction.sh
 ```
 
-Next, the extracted concepts are encoded into embeddings using the LLaMA-3.1-8B model:
+Next, the extracted concepts are encoded into embeddings using the <a href="https://huggingface.co/meta-llama/Llama-3.1-8B"><b>Llama-3.1-8B</b></a>  model:
 
 ```
 bash scripts/synthesis/step2_concepts_encoding.sh
@@ -147,19 +149,19 @@ After embedding the concepts, we aggregate them by category and allocate a sampl
 bash scripts/synthesis/step3_concepts_sampling.sh
 ```
 
-Here we start generating new questions using LLaMA-3.3-70B-Instruct based on the sampled concepts derived from the model's low-efficiency learning problems, i.e., the weaknesses identified in our study.
+Here we start generating new questions using <a href="https://huggingface.co/meta-llama/Llama-3.3-70B-Instruct"><b>Llama-3.3-70B-Instruct</b></a>  based on the sampled concepts derived from the model's low-efficiency learning problems, i.e., the weaknesses identified in our study.
 
 ```
 bash scripts/synthesis/step4_problem_generation.sh
 ```
 
-We then evaluate the quality of the synthetic questions using both the LLaMA-3.3-70B-Instruct and Qwen2.5-72B-Instruct models, filtering out those that do not meet our standard—specifically, requiring at least one perfect rating and one acceptable rating.
+We then evaluate the quality of the synthetic questions using both the <a href="https://huggingface.co/meta-llama/Llama-3.3-70B-Instruct"><b>Llama-3.3-70B-Instruct</b></a>  and <a href="https://huggingface.co/Qwen/Qwen2.5-72B-Instruct"><b>Qwen2.5-72B-Instruct</b></a>  models, filtering out those that do not meet our standard—specifically, requiring at least one perfect rating and one acceptable rating.
 
 ```
 bash scripts/synthesis/step5_quality_evaluation.sh
 ```
 
-Next, we generate reference answers for the high-quality synthetic problems using strong reasoning models such as QwQ-32B.
+Next, we generate reference answers for the high-quality synthetic problems using strong reasoning models such as <a href="https://huggingface.co/Qwen/QwQ-32B"><b>QwQ-32B</b></a> .
 
 ```
 bash scripts/synthesis/step6_answer_verification.sh
@@ -168,7 +170,7 @@ bash scripts/synthesis/step6_answer_verification.sh
 After generating the reference answers, we prompt the initially trained model with the synthetic questions and retain only those that fall within an acceptable accuracy range and exhibit an appropriate level of difficulty. Finally, we incorporate the remaining questions into the original set and start the second round of the augmented RL training.
 
 ## 3. Augmented RL Training
-Here is the bash script for running the augmented RL training on the Qwen2.5-7B base model. During this stage, we set `data.accuracy_lower_bound=0.125` and `data.accuracy_upper_bound=0.875`. 
+Here is the bash script for running the augmented RL training on the [Qwen2.5-7B](https://huggingface.co/Qwen/Qwen2.5-7B) base model. During this stage, we set `data.accuracy_lower_bound=0.125` and `data.accuracy_upper_bound=0.875`. 
 
 ```bash
 bash scripts/qwen25_7b_augment_training.sh
