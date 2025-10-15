@@ -39,11 +39,13 @@ Repo for "<a href="https://arxiv.org/pdf/2506.08989" target="_blank">SwS: Self-a
 
 ## 🔥 News
 
-<!-- - [2023/10/13] 🔥🔥🔥 We release a demo for ToRA at [🐯 Gradio](https://9557c5365a6f44dc84.gradio.live), try it out!!! -->
-- [2023/06/13] We release all prompts used in the SwS framework in <a href="https://github.com/MasterVito/SwS/tree/master/prompts"><b>prompts</b></a>.
-- [2023/06/13] We update the demo set of synthetic problems from SwS in <a href="https://github.com/MasterVito/SwS/tree/master/datasets"><b>datasets</b></a>, including 500 samples for each model and category. You can also find them in <a href="https://huggingface.co/datasets/MasterVito/SwS-Demo-Dataset"><b>Demo Dataset</b></a>.
-- [2023/06/10] **Our full code and datasets are under review by Microsoft and will be released upon approval.**
-- [2023/06/10] SwS paper, repo, website and demo datasets released.
+- [2025/10/14] 🔥 We release all code, including implementations for RL training and problem synthesis.
+- [2025/09/18] SwS has been accepted to NeurIPS 2025! Welcome any discussions during the conference.
+- [2025/06/13] We release all prompts used in the SwS framework in <a href="https://github.com/MasterVito/SwS/tree/master/prompts"><b>prompts</b></a>.
+- [2025/06/13] We update the demo set of synthetic problems from SwS in <a href="https://github.com/MasterVito/SwS/tree/master/datasets"><b>datasets</b></a>, including 500 samples for each model and category. You can also find them in <a href="https://huggingface.co/datasets/MasterVito/SwS-Demo-Dataset"><b>Demo Dataset</b></a>.
+- [2025/06/10] **Our full code and datasets are under review by Microsoft and will be released upon approval.**
+- [2025/06/10] SwS paper, repo, website and demo datasets released.
+
 
 ## 💡 Introduction 
 
@@ -76,7 +78,6 @@ The Self-aware Weakness-driven problem Synthesis framework (SwS) framework propo
 
 
 
-
 ### 32B Model Performance
 
 
@@ -95,6 +96,90 @@ The Self-aware Weakness-driven problem Synthesis framework (SwS) framework propo
 P.S: Additional results for Qwen2.5-3B and Qwen2.5-7B-Math are provided in the paper.
 </div>
 <br>
+
+
+## 🚀 Quick Start
+
+We recommend using [Conda](https://docs.conda.io/projects/miniconda) to manage your environment. We use [vLLM](https://github.com/vllm-project/vllm) (0.10.1.1) to accelerate inference. Run the following commands to setup your environment:
+
+```sh
+git git@github.com:MasterVito/SwS.git && cd SwS
+conda create -n sws python=3.10.16
+conda activate sws
+pip install torch==2.7.1 --index-url https://download.pytorch.org/whl/cu128 # CUDA 12.8 for example
+pip install -r requirements.txt
+```
+
+**Model downloading:** Here we utilize the [Qwen2.5-base](https://huggingface.co/Qwen/Qwen2.5-7B) model trained on the <a href="data/MATH_12k.parquet"><b>MATH-12k</b></a> dataset. You can download the model using the following command:
+
+```sh
+mkdir -p models
+pip install -U "huggingface_hub[cli]"
+huggingface-cli login # use your huggingface token
+huggingface-cli download Qwen/Qwen2.5-7B --local-dir models/Qwen2.5-7B
+```
+
+## 1. Weakness Identification in Initial RL
+We provide a bash script for running the weakness identification stage on the Qwen2.5-7B base model. During this stage, we do not filter out problems with 0% or 100% accuracy, as we set `data.accuracy_lower_bound=0.0` and `data.accuracy_upper_bound=1.0`. The indices of the selected problems from the training set will be saved to the specified `save_path`.
+
+```bash
+bash scripts/qwen25_7b_weakness_identification.sh
+```
+
+## 2. Problem Synthesis
+The sampling accuracy of problems at each step is also stored in the model checkpoint path. You can compute and summarize these accuracies following the format in the <a href="record"><b>record</b></a> folder.
+
+Given the recorded problems with low learning efficiency, we begin by extracting key concepts from the recorded problems using the LLaMA-3.3-70B-Instruct model:
+
+```
+bash scripts/synthesis/step1_concepts_extraction.sh
+```
+
+Next, the extracted concepts are encoded into embeddings using the LLaMA-3.1-8B model:
+
+```
+bash scripts/synthesis/step2_concepts_encoding.sh
+```
+
+After embedding the concepts, we aggregate them by category and allocate a sampling budget for each category based on their normalized failure ratios across categories:
+
+```
+bash scripts/synthesis/step3_concepts_sampling.sh
+```
+
+Here we start generating new questions using LLaMA-3.3-70B-Instruct based on the sampled concepts derived from the model's low-efficiency learning problems, i.e., the weaknesses identified in our study.
+
+```
+bash scripts/synthesis/step4_problem_generation.sh
+```
+
+We then evaluate the quality of the synthetic questions using both the LLaMA-3.3-70B-Instruct and Qwen2.5-72B-Instruct models, filtering out those that do not meet our standard—specifically, requiring at least one perfect rating and one acceptable rating.
+
+```
+bash scripts/synthesis/step5_quality_evaluation.sh
+```
+
+Next, we generate reference answers for the high-quality synthetic problems using strong reasoning models such as QwQ-32B.
+
+```
+bash scripts/synthesis/step6_answer_verification.sh
+```
+
+After generating the reference answers, we prompt the initially trained model with the synthetic questions and retain only those that fall within an acceptable accuracy range and exhibit an appropriate level of difficulty. Finally, we incorporate the remaining questions into the original set and start the second round of the augmented RL training.
+
+## 3. Augmented RL Training
+Here is the bash script for running the augmented RL training on the Qwen2.5-7B base model. During this stage, we set `data.accuracy_lower_bound=0.125` and `data.accuracy_upper_bound=0.875`. 
+
+```bash
+bash scripts/qwen25_7b_augment_training.sh
+```
+
+## 🔎 Evaluation
+We provide a script for inference, simply config the `model_name_or_path` and `data_path` (default as using MATH-500 and AIME24 & AIME25 for evaluation) in [scripts/evaluation.sh](scripts/evaluation.sh) and run the following command:
+
+```sh
+bash scripts/evaluation.sh
+```
 
 
 ## ☕️ Citation
